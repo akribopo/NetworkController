@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>eu.server.XbeeServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/networkcontroller/XbeeRpcService</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+        <servlet-name>websocketServlet</servlet-name>
+        <servlet-class>eu.server.websocket.WebSocketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>websocketServlet</servlet-name>
+        <url-pattern>/networkcontroller/websocket</url-pattern>
+    </servlet-mapping>
+
+    <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>NetworkController.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
