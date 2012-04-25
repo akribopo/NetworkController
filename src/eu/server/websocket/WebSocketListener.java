@@ -81,7 +81,7 @@ public class WebSocketListener extends AbstractWebSocketListener implements Obse
 
     @Override
     public void update(final Observable o, final Object arg) {
-        System.out.println("Update");
+        //System.out.println("Update");
 
         for (final WebSocketContext user : users) {
             try {
